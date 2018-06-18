@@ -23,6 +23,7 @@ contract Lottery {
 
         uint index = random() % players.length;
         players[index].transfer(this.balance);
+        // lastWinner = players[index];
         players = new address[](0);
     }
 
